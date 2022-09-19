@@ -1,32 +1,32 @@
 #1.1.9 AP Exam Practice
 import turtle as trtl
 painter = trtl.Turtle()
-mtlist = []
-x = 270
-y = int(input("enter a number "))
-z = y
+sides_list = []
+heading = 270
+number_of_sides = int(input("enter a number "))
+orginal_number_of_sides = number_of_sides
+
+#set cursor position
 painter.penup()
 painter.goto(-250,0)
 painter.pendown()
+painter.pensize(5)
 
-#setup list of numbers
-while y > 0:
-  mtlist.append(y)
-  y = y - 1
+#set up list of numbers
+while number_of_sides > 0:
+  sides_list.append(number_of_sides)
+  number_of_sides = number_of_sides - 1
 
-# set color based on number of sides
-if z > 8:
+# set color if odd or even number of sides
+if orginal_number_of_sides % 2 == 1:
   painter.pencolor("green")
-  painter.pensize(10)
-else:
+elif orginal_number_of_sides % 2 == 0:
   painter.pencolor("red")
-  painter.pensize(5)
 
 # draw shape
-for number in mtlist:
-  x = x + (360/z)
-  #painter.circle(25)
-  painter.setheading(x)
+for number in sides_list:
+  heading = heading + (360/orginal_number_of_sides)
+  painter.setheading(heading)
   painter.forward(100)
 
 wn = trtl.Screen()
