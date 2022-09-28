@@ -9,12 +9,13 @@ size = 2
 shape = ("turtle")
 score = 0
 font_setup = ("Arial", 20, "normal")
-timer = 5
+timer = 2
 counter_interval = 1000   #1000 represents 1 second
 timer_up = False
 # leaderboard variables
-leaderboard_file_name = "a122_leaderboard.txt"
+leaderboard_file_name = "leaderboard.txt"
 player_name = input ("Please enter your name:")
+print (player_name)
 #-----initialize turtle-----
 turtle = trtl.Turtle()
 turtle.shape(shape)

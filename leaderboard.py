@@ -16,9 +16,11 @@ def get_names(file_name):
   for line in leaderboard_file:
     leader_name = ""
     index = 0
-
+    print("leader name is:", leader_name)
     # TODO 1: use a while loop to read the leader name from the line (format is "leader_name,leader_score")
-
+    while (line[index] != ","):
+      leader_name = leader_name + line[index] 
+      index = index + 1
     # TODO 2: add the player name to the names list
 
   leaderboard_file.close()
@@ -74,7 +76,7 @@ def update_leaderboard(file_name, leader_names, leader_scores,  player_name, pla
   # TODO 13 loop through all the leaderboard elements and write them to the the file
   for   :
     leaderboard_file.write(leader_names[index] + "," + str(leader_scores[index]) + "\n")
-
+    
   leaderboard_file.close()
    '''
   
